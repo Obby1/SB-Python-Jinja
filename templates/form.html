@@ -1,0 +1,12 @@
+{% extends 'base.html'  %}
+{% block title %}Greeter Form V1{% endblock %}
+
+{% block content %}
+    <h1>Greeter Form</h1>
+    <!-- action takes you to that page after button -->
+    <form action="/greet">
+        <!-- name variable below gets put into query string and can be accessed with request.args["username"] -->
+        <input type="text" placeholder="your name" name="username">
+        <button>Submit!</button>
+    </form>
+{% endblock %}

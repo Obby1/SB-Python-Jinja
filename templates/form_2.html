@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} Greeter Form V2 {% endblock %}
+<!-- below needs to be above block content or else won't display right -->
+{% block page_name %}You are on Greeter Page {%endblock%}
+
+{% block content %} 
+
+
+
+
+    <h1>Greeter Form</h1>
+    <!-- action takes you to that page after button -->
+    <!-- update form action  -->
+    <!-- below form action doesnt link to template, it links to app.route in app.py -->
+    <!-- template is linked to in render_template in app.py -->
+    <form action="/greet-2">
+        <!-- name variable below gets put into query string and can be accessed with request.args["username"] -->
+        <input type="text" placeholder="your name" name="username">
+        <label for="compliments">Do you want compliments?</label>
+        <!-- label for associates label with the input below, nothing to do with data sent, need to add a name -->
+        <!-- adding name below adds wants_compliments to the query string you can access with args -->
+        <input id="compliments" type="checkbox" name="wants_compliments">
+        <button>Submit!</button>
+    </form>
+    
+{% endblock %}

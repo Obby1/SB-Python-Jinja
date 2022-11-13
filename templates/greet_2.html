@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} Greeter v2 {% endblock %}
+
+{% block content %} 
+
+<h1>Hi there, {{username}} !</h1>
+
+{% if wants_compliments %}
+<h2>OK HERE ARE COMPLIMENTS!</h2>
+<ul>
+    <!-- can replace this with for post in redditposts or comment in comments etc but obviously those have a ton more mark up-->
+    {% for compliment in compliments %}
+    <li>{{username}} is {{compliment}}!</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% endblock %}

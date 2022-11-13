@@ -1,0 +1,18 @@
+{% extends 'base.html'  %}
+{% block title %}Lucky Numbers{% endblock %}
+
+{% block content %}
+    <h1>Your lucky number is: {{lucky_num}} </h1>
+    <p>{{msg}}</p>
+    {% if lucky_num == 3 %}
+    <h2> That's my lucky number too!</h2>
+    <img src="https://cdn.monsterjam.com/2022-09/dragon_full.jpg" alt="">
+    {% else %}
+    <h2> {{lucky_num}} is not my lucky number </h2>
+    <img src="https://media.tenor.com/TDoaU1-fcDgAAAAM/pout-girl.gif" alt="">
+    {% endif %}
+
+{%  endblock %}
+
+<!-- empty alt tag makes screen readers skip that image -->
+<!-- endif for jinja only -->

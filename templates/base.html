@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- best to link to stylesheet in base template to avod duplication and make it simple -->
+    <!-- make a directory called static or assets -->
+    <!-- only works on templates that extend base.html -->
+    <link rel="stylesheet" href="/static/app.css">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a href="/form">Greet v1</a>
+        <a href="/form-2">Greet v2</a>
+        <a href="/lucky">Lucky</a>
+        <a href="/hello">Hello</a>
+        <a href="/goodbye">Goodbye</a>
+        <a href="/home">Home</a>
+
+        
+        <!-- <a href="">{% block page_name %} {%endblock%}</a> -->
+    </nav>
+<!-- instead of putting content in body directly, put it in a container we can style -->
+    <main id="content">
+        {% block content %} {% endblock %}
+
+<!-- b. just deleted footer looks nasty -->
+        <!-- <footer>
+            PRETEND IM A FOOTER
+        </footer> -->
+    
+    </main>
+
+<!-- a. move footer inside of main content block to format it a bit? -->
+    <!-- <footer>
+        PRETEND IM A FOOTER
+    </footer> -->
+
+    
+    <script src="/static/app.js"></script>
+</body>
+</html>
